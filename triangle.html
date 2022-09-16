@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Triangle</title>
+  </head>
+  <body>
+    <h2>
+      Program to check whether the given sides of triangle is equilateral ,
+      isosceles or scalene :
+    </h2>
+    <p><b>Note:</b> Please Enter the sides in the same unit</p>
+    <p style="display: inline">Enter the first side of triangle:</p>
+    <input type="number" id="side1" name="number" value="1" /><br />
+    <p style="display: inline">Enter the second side of triangle:</p>
+    <input type="number" id="side2" name="number" value="1" /><br />
+    <p style="display: inline">Enter the third side of triangle:</p>
+    <input type="number" id="side3" name="number" value="1" /><br />
+
+    <button onclick="triangle()">Check Now</button>
+
+    <h1 id="demo"></h1>
+
+    <!-- Javascript part  -->
+    <!-- For checking the type of triangle using the sides -->
+
+    <script>
+      function triangle() {
+        let n1 = document.getElementById("side1").value;
+        let n2 = document.getElementById("side2").value;
+        let n3 = document.getElementById("side3").value;
+        // for equilateral triangle 
+        if (n1 == n2 && n2 == n3)
+            document.getElementById("demo").innerText = `Equilateral Triangle having sides ${n1} , ${n2} and ${n3} `;
+            // for isosceles triangle
+        else if (n1 == n2 || n2 == n3 || n1 == n3)
+            document.getElementById("demo").innerText = `Isosceles Triangle having sides ${n1} , ${n2} and ${n3} `;
+            // for scalene triangle
+        else
+            document.getElementById("demo").innerText = `Scalene Triangle having sides ${n1} , ${n2} and ${n3} `;
+        
+      }
+    </script>
+  </body>
+</html>
